@@ -1,0 +1,23 @@
+
+import java.io.*;
+
+class Pattern1{
+
+	public static void main(String[]args)throws IOException{
+	
+		BufferedReader br = new BufferedReader (new InputStreamReader(System.in));	
+		
+		System.out.print("Enter no.of Rows:- ");
+		int rows = Integer.parseInt(br.readLine());
+		int num = 0;
+		for (int i=1; i<=rows; i++){
+			num = i;
+			for (int j=rows; j>=i; j--){
+			
+				System.out.print(num + " ");
+				num++;
+			}
+			System.out.println();
+		}
+	}
+}
