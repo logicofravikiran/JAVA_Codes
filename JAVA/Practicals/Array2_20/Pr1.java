@@ -1,14 +1,15 @@
 
 
-import java.util.*;
+import java.io.*;
 
 class Pr1{
 
-	public static void main(String[]args){
+	public static void main(String[]args) throws IOException{
 	
-		Scanner sc = new Scanner(System.in);
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-		int size = sc.nextInt();
+		System.out.print("Enter size of Array:- ");
+		int size = Integer.parseInt(br.readLine());
 
 		int arr[] = new int[size];
 
@@ -17,7 +18,7 @@ class Pr1{
 		for (int i=0; i<size; i++){
 		
 			System.out.print("Enter Element:- ");
-			arr[i] = sc.nextInt();
+			arr[i] = Integer.parseInt(br.readLine());
 		}
 		
 		System.out.print("Even numbers:- ");
@@ -29,6 +30,7 @@ class Pr1{
 				System.out.print(arr[i] + "\t");
 			}
 		}
+		System.out.println();
 		System.out.println("Count of Even Numbers:- "+ count);
 
 	}
